@@ -1,0 +1,136 @@
+package com.kh.variable;
+
+public class Variable {
+	
+	// 변수 : Memory(RAM)에 값을 저장하기 위한 공간         음 저장된 공간 
+	
+		// 변수 그냥 한 번 써보기 --> 설명을 위해서 하는것 절대로 쓰면 안돼! 변수는 긴바지 반바지
+		public void 바지를저장하는기능() {
+			String 옷장 = "긴바지";
+			String 행거 = "반바지";
+			System.out.println(옷장);
+			System.out.println(행거);
+	}
+		
+		
+		
+		
+		// 변수를 사용했을 때 장점!
+		
+		// 점심메뉴 출력 프로그램(키오스크)
+		public void findLunchMenu() {
+		
+			// 1. 메뉴들을 출력(메뉴명, 가격)
+			// 2. 여러분들이 메뉴판을 보고 주문을 했다고 가정
+			// 3. 여러분들이 내야할 금액을 출력 
+			System.out.println("--- 변수를 사용하기 전 ---");
+			System.out.println("메뉴판 > ");
+			System.out.println("1. 트리플 치즈버거 세트(15000)");
+			System.out.println("2. 빅맥 세트(8000)");
+			System.out.println("3. 1955버거 세트(11000)");
+			
+			// 트리플치즈버거   4명
+			// 빅맥 		    9명
+			// 1955 	    4명
+			
+			System.out.println("----------------------");
+			System.out.println("트리플치즈버거 4개 주문");
+			System.out.println("60000원 입니다.");
+			System.out.println("빅맥 9개 주문");
+			System.out.print(8397 * 9);                 // 밑에랑 붙여쓰고싶어 System.out.println((8397 * 9) + "원 입니다.");
+			System.out.println("원 입니다.");
+			System.out.println("1955 4개 주문");
+			System.out.println("44000원 입니다.");
+			System.out.println("----------------------");
+			
+			System.out.println("트리플치즈버거 4개 주문");
+			System.out.println((10000 * 4) + "원 입니다.");
+			
+			
+			System.out.println("====================");
+			System.out.println("변수를 사용해 봅시다!");
+			// 메뉴명과 가격이라는 값을 담을 공간
+			// 변수를 선언하고 변수공간에 값을 대입해서 사용!
+			String setOne = "KH아카데미표 슈슈버거 세트";
+			int setOnePrice = 9800;
+			String setTwo = "KH아카데미표 비크매크 세트";
+			int setTwoPrice = 8800;
+			
+			System.out.println("메뉴판 > ");
+			System.out.println(setOne + ", 가격 : " + setOnePrice);
+			System.out.println(setTwo + ", 가격 :" + setTwoPrice);
+			
+			System.out.println(setOne + " 를 10개 시켰습니다.");
+			System.out.println((setOnePrice * 10) + "원 입니다");
+			System.out.println((setTwoPrice * 5) + "원 입니다.");
+			
+			/*
+			 * 변수를 사용해 봤더니??
+			 * 
+			 * 1. 딱 한 번 값을 대입해서 필요한 순간마다 다시 사용할 수 있음
+			 * => 재사용ㅇ성이 높아짐
+			 * 2. 동일한 값을 수정해야 할 때 한 번만 수정하면됨
+			 * => 실수의 확률이 줄얻느다
+			 * 3. 값에 의미를 부여할 수 있음
+			 * => 가독성이 높아짐
+			 * 
+			 */
+			
+			
+			// 변수를 사용하는 방법에 대해서 알아봅시다!!
+		}
+			
+			public void declareVariable() {
+				/*
+				 * 변수 선언 방법
+				 * 
+				 * int price;
+				 * 
+				 * 자료형(DataType) 변수식별자;
+				 * 권장하는 방법은 아니지만 동일한 타입의 변수를 선얼할 때는 한번에 선언 할 수 있음
+				 * int a, b, c; <-- 하지말라고 알려주는 것
+				 * 변수를 선언하고 난 뒤 처음 값을 대입하는 과정을 초기화(Initialzation)라고 함
+				 * 초기화를 통해 대입한 값을 초기값이라고함
+				 * 
+				 *
+				 *
+				 */
+				// System.out.println(setOne);
+				// 변수는 자신이 선언된 {Scope} 에서만 사용할 수 있음
+				// local variable(지역변수) 
+				
+				/* 식별자(Identifier)
+				 * 
+				 * 클래스명, 메소드명, 변수명 등 개발자가 만들어서 이용하는 고유의 이름
+				 * 
+				 * - 식별자를 만들 때 꼭 지켜야하는 규칙! (안지키면 안만들어짐)
+				 * 
+				 * 1. keyword(예약어)는 식별자로 사용할 수 없음 ex) int static;
+				 * 2. 공백은 포함할 수 없음 ex) int sta tic;
+				 * 3. 대, 소문자를 구분하고 길이제한은 없음 ex) int age; int Age;, int aGe; 서로 다른 변수로 이해
+				 * 4. 문자, 숫자, _, $ 를 포함할 수 있음 ex) int age2_$; 특수문자 _,$ 2개만 가능
+				 * 5. 문자, _, $로만 시작할 수 있음 ex) int 2age;(x) 
+				 * 
+				 * 
+				 * - 개발자들끼리의 암묵적인 약속(안 지키면 책상 뒤엎음) => 영어만 사용가능
+				 * 1. 클래스 / 인터페이스 명명 규칙
+				 * 
+				 * - 첫 글자는 대문자로 표기
+				 * - 연결된 단어들의 첫 글자도 대문자로 표기
+				 * - 명사, 형용사를 서술적으로 연결해서 사용
+				 * 
+				 * -> welcomtojavaworld -> WelcomeToJavaWorld
+				 * 
+				 * 
+				 */
+				
+				int price; // 변수선언
+				
+				
+			}
+			
+			
+		
+	
+
+}

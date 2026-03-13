@@ -1,0 +1,54 @@
+package com.kh.constant;
+
+public class Constant {
+	// * 상수
+	// 수학익힘책 -> 변하지 않는 값 
+	public static void main(String[] args) {
+		//정수(+, -)
+		System.out.println(7);
+		System.out.println(-7);
+		System.out.println("---------------");
+		// 실수(7.7777)
+		System.out.println(7.7);
+		System.out.println(-7.7);
+		System.out.println("---------------");
+		// (단일)문자, 문자열 은 따움표 차이
+		System.out.println('돈');
+		System.out.println("돈 100억");
+		// 논리값(true, false)
+		System.out.println(true);
+		System.out.println(false);
+		
+		System.out.println("----------------");
+		System.out.println(7);		// 7 다르게이해 기계는
+		System.out.println('7');	// 칠
+		System.out.println("7");	// 
+	}
+	
+	
+	boolean isTure; // 변수 선언
+	// System.out.println(isTrue);
+	// 지역변수 (local variabale)는 초기화를 하지 않으면 사용할 수 없음
+	isTrue = true;
+	System.out.println(isTrue);
+	isTrue = false; // 변수에 값을 대입
+	System.out.println(isTrue);
+	
+	// 출력문의 종류
+	// System.out.print();
+	// System.out.println(); => 개행한다
+	// System.out.printf(); => f는 format, 개행 안 함
+	
+	System.out.println("논리 자료형 : " + isTrue + )
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
