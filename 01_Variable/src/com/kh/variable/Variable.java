@@ -12,6 +12,7 @@ public class Variable {
 			String 행거 = "반바지";
 			System.out.println(옷장);
 			System.out.println(행거);
+			
 	}
 		
 		
@@ -162,10 +163,10 @@ public class Variable {
 				boolean isTure; // 변수 선언
 				// System.out.println(isTrue);
 				// 지역변수 (local variabale)는 초기화를 하지 않으면 사용할 수 없음
-				isTrue = true;
-				System.out.println(isTrue);
-				isTrue = false; // 변수에 값을 대입
-				System.out.println(isTrue);
+				isTure = true;
+				System.out.println(isTure);
+				isTure = false; // 변수에 값을 대입
+				System.out.println(isTure);
 				
 				/*
 				 * 2. 숫자 자료형
@@ -202,7 +203,7 @@ public class Variable {
 				// 선언과 동시에 초기화
 				
 				// 3. (단일)문자형
-				char money = '돈' 	// 2Byte
+				char money = '돈'; 	// 2Byte
 				// 단일문자에는 반~~~~~~~~드시 혿 따옴표를 붙여줍니다
 
 				// 여기까지가 기본자료형 / 원시자료형 8개!!!! 암기
@@ -213,7 +214,7 @@ public class Variable {
 				// 9개의 자료형을 가지고 변수를 선언
 				// 각각의 변수에 초기값을 대입 초기하를 진행
 				// 9개의 변수에 값이 잘 들어 갔나???
-				System.out.println("논리 자료형 : " + isTrue);
+				System.out.println("논리 자료형 : " + isTure);
 				// 정수자료형 4개
 				System.out.println("정수 자료형 : " + byteNumber);
 				System.out.println("정수 자료형 : " + shortNumber);
@@ -232,7 +233,7 @@ public class Variable {
 				// System.out.println(); => 개행한다
 				// System.out.printf(); => f는 format, 개행 안 함
 				
-				System.out.printf("논리 자료형 : %b, + 정수 자로형 : %d \n", isTrue, intNumber );
+				System.out.printf("논리 자료형 : %b, + 정수 자로형 : %d \n", isTure, intNumber );
 				// %b : 논리 타입
 				// %d : 정수 타입
 				// %f : 실수 타입
@@ -268,3 +269,4 @@ public class Variable {
 	
 
 }
+
