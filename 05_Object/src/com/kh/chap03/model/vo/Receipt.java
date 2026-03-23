@@ -51,7 +51,7 @@ public class Receipt {
 	
 	// info()
 	public String info() {
-		String info = "상품명 : " + storeName
+		String info = "상점명 : " + storeName
 					+ ", 금액 : " + price
 					+ ", 결제수단 : " + payment
 					+ ", 결제일시 : " + date;
