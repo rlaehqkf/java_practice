@@ -37,7 +37,29 @@ public class Member {
 	}
 	public Member(String userId) {
 		System.out.println("유저아이디~");
+		this.userId = userId;
 	}
+	public Member(String usreId, String userPwd) {
+		this.userId = usreId;
+		this.userPwd = userPwd;
+		
+	}
+	
+	public Member(String userId, String userPwd, String nickName) {
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.nickName = nickName;
+	}
+	/*
+	 * 1. 반드시 생성자의 이름을 클래스의 이름과 동일하게 작성해야함(대/소문자)
+	 * 2. 반환형이 존재해서는 안됨!!
+	 * 3. 매개변수 생성자를 명시적으로 작성하면 기본생성자를 만들어주지 않음!!!
+	 * => Legacy 기술들을 기본생성자가 필요한 상황이 있음!
+	 * 4. 생성자는 동일한 이름으로 여러 개 만들 수 있지만 매개변수는 중복되면 안됨!
+	 * => 생성자 오버로딩 
+	 */
+	
+		
 	
 	
 	

@@ -9,7 +9,14 @@ public class MemberView {
 		Member member = new Member();
 		System.out.println(member.info());
 		
-		new Member("user01");
+		Member member1 = new Member("user01");
+		System.out.println(member1.info());
+		
+		Member member2 = new Member("user02", "pass02");
+		System.out.println(member2.info());
+		
+		Member member3 = new Member("user03", "pass03", "홍길동");
+		System.out.println(member3.info());
 		
 	}
 

@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="com.kh.chap02.loop.LoopWhile"/>
     <fullyQualifiedTypeName name="com.kh.array.Array"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.kh.chap05.model.vo.Member"/>
 </qualifiedTypeNameHistroy>
