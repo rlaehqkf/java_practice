@@ -2,10 +2,12 @@ package com.kh.chap07.view;
 
 import java.util.Scanner;
 
+import com.kh.chap07.controller.TicketController;
 import com.kh.chap07.model.vo.Ticket;
 
 public class TicketView {
 	private Scanner sc = new Scanner(System.in);
+	private TicketController tc = new TicketController();
 	
 	//화면에 메인메뉴를 출력해주는 메소드
 	public void mainMenu() {
@@ -17,6 +19,7 @@ public class TicketView {
 		while(true) {
 		System.out.println("티켓 발권 서비스입니다~");
 		System.out.println("원하시는 메뉴를 선택해주세요~");
+		System.out.println("0. 티켓 전체조회하기");
 		System.out.println("1. 티켓 추가하기");
 		System.out.println("2. 티켓 발급받기");
 		System.out.println("3. 프로그램 종료");
@@ -26,7 +29,9 @@ public class TicketView {
 		// System.out.println(menuNo);
 		
 		switch(menuNo) {
-		case 1 :  break; // 여기가 잘못된듯
+		case 0 : findAll(); break;
+		case 1 : saveView(); break; 
+		case 2 : printTicket(); break;
 		case 3 : System.out.println("프로그램을 종료합니다"); sc.close(); return;
 		default : System.out.println("없는 메뉴를 선택하셨습니다");
 		}
@@ -50,9 +55,75 @@ public class TicketView {
 		String service = sc.nextLine();
 		
 		Ticket ticket = new Ticket(meal, service, seatNumber, price); 
-		System.out.println(ticket.info());
+		// System.out.println(ticket.info());
+		// 등록된 티켓이 3장이 아니라면 어딘가에 저장해둬야지~
+		// TicketController tc = new TicketController(); 여기에 안쓰고 스캐너처럼 필드에 그래야 안죽고
+		
+		// 객체에서 다른 객체로 값을 전달할 때는 메소드를 호출해서 넘겨주자!
+		// System.out.println("View : " + ticket);
+		int result = tc.saveTicket(ticket);
+		
+		// 성공 실패 여부 출력
+		
+		if(result == 1) { 
+			System.out.println("티켓 등록 성공");
+		} else {
+			System.out.println("티켓 등록 실패...");
+		}
+	
 		
 	}
+	
+	private void printTicket() {
+		
+		// 컨트롤러야 서비스에게 티켓정보 하나만 받아다 주지 않으련??
+		Ticket ticket = tc.printTicket();
+		if(ticket != null) {
+			
+			// 티켓이 있을수도 있음
+			System.out.println(ticket.info());
+		} else {
+			// 티켓이 없으수도 있음
+			System.out.println("티켓이 하나도 존재하지 않습니다");
+		}
+		
+	}
+		
+		private void findAll() {
+			Ticket[] tickets = tc.findAll();
+			
+			if(tickets[0] != null) {
+				System.out.println(tickets[0].info());
+			}
+			if(tickets[1] != null) {
+				System.out.println(tickets[1].info());
+		}
+			if(tickets[2] != null) {
+				System.out.println(tickets[2].info());
+		}
+		
+		for(int i = 0; i < tickets.length; i++) {
+			if(tickets[i] != null) {
+				System.out.println(tickets[i].info());
+			}
+		}
+			
+			
+			
+			
+			
+			
+			
+			
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
