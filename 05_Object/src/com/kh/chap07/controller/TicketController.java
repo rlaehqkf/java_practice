@@ -4,7 +4,9 @@ import com.kh.chap07.model.vo.Ticket;
 import com.kh.chap07.service.TicketService;
 
 public class TicketController {
-	private TicketService ts = new TicketService(); // 프로그램종료까지 살아잇어
+	private TicketService ts = new TicketService(); // = 합성
+	
+	// 프로그램종료까지 살아잇어
 	
 	
 	// 조율자 클래스

@@ -5,8 +5,8 @@ package com.kh.chap02.model.vo;
  * 기존에 존재하는 클래스를 이용해서 새로운 클래스를 만드는 기술
  * 
  */
-
-public class Game {
+					// 자연스럽게 붙어있는 object 모든자바는 object 클래스의 후손이야
+public class Game extends Object {
 	// 공통필드
 	private String gameName;
 	private String publisher;
