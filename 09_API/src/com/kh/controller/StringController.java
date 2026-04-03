@@ -1,5 +1,8 @@
 package com.kh.controller;
 
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 import com.kh.run.Run;
 
 public class StringController {
@@ -109,8 +112,99 @@ public class StringController {
 		
 		String str1 = "은총알은 없다";
 		
-		// 1. 문자열.lenght()
+		// 1. 문자열.lenght() : int 
 		// 문자열의 길이를 반환
+		System.out.println("str1의 길이 : " + str1.length());
+		// System.out.println("객체야 이건".);
+		
+		
+		String userId = "sjdofpf";
+		// 아이디 8~20자
+		/*
+		if(!(8 <= userId.length() && userId.length() <= 20)) {
+			throw new RuntimeException("아이디 글자수 어쩌~~");            // 이상하게출력된다 확인
+		
+		}
+		*/
+		
+		// 2. 문자열.charAt() : char
+		char ch = userId.charAt(0);
+		System.out.println(ch);
+		
+		String phoneNumber = "010-1234-5678";
+		// 3. 문자열substring(int beginindex) : String
+		System.out.println(phoneNumber.substring(4)); // 4부터 끝까지 010- 다음부터
+		System.out.println(phoneNumber.substring(4, 8));
+		
+		// 4/ 문자열.indexOf(String) : int
+		//								"은총알은 없다"
+		System.out.println(str1.indexOf("없다"));
+		
+		String[] emails = {"hong@kh.com", "kim@kh.com", "lee@kh.com", "hahahooh@kh.com"};
+		// System.out.println(emails[0].substring(0, 4));
+		// System.out.println(emails[1].substring(0, 3));
+		
+		for(int i = 0; i < emails.length; i++) {
+			System.out.println(emails[i].substring(0, emails[i].indexOf("@")));
+		}
+		
+		String fileName = "sdjof.jpg";
+		System.out.println(fileName.substring(fileName.indexOf(".")));
+		
+		String fileName2 = "sd.sdf.sdf.sdf.sdf.sdf.png";
+		System.out.println(fileName2.substring(fileName2.lastIndexOf(".")));
+		
+		
+		// 문자열.toCharArray() : char[]
+		String str5 = "배열로만들어문자열";
+		char[] chArr = str5.toCharArray();
+		for(int i = 0; i < chArr.length; i++) {
+			System.out.println(chArr[i]);
+		}
+		for(char c : chArr) {
+			System.out.println(c);
+		}
+		// new String(chArr).chars().mapToObj(c -> (char)c).forEach(System.out::println);
+		
+		// char[] -> String
+		System.out.println(String.valueOf(chArr));
+		
+		
+		
+		String replaceStr = "KH 아카데미";
+		// 문자열.repalce(Str, Str) : String
+		System.out.println(replaceStr.replace("KH", "더조은"));
+		
+		// 문자열.toUpperCase() -> 싹다 대문자로 변환
+		//	   .toLowerCase() -> 싹다 소문자로 변환
+		String lowerStr = "abcd";
+		String upperStr = "ABCD";
+		System.out.println(lowerStr.toUpperCase());
+		System.out.println(upperStr.toLowerCase());
+		
+	
+	
+	/*
+	 * String str1 = "11,22,33,44";
+	 * String str2 = "22,44,66,88";
+	 * 
+	 * String str3 = "avcds sdifods"
+	 */
+	
+	// 문자열 분리시키기
+	String split = "갈비,갈비찜,곽만근갈비찜,곽만근얼큰갈비탕";
+	
+//	String galubi = split.split(",");
+//	System.out.println(Arrays.toString(galubi));       이두개 왜 에러지?
+	
+	// java.util.StringTokenizer 클래스를 이용하는 방법
+	StringTokenizer stn = new StringTokenizer(split,",");
+	
+	// System.out.println(stn.nextToken());
+	// System.out.println(stn.nextToken());
+	
+	while(stn.hasMoreTokens()) { // 남아있는 토큰이있다면 true / 없다면 false 반환
+		System.out.println(stn.nextToken());
 		
 	}
 	
@@ -142,16 +236,7 @@ public class StringController {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 	
 
 }

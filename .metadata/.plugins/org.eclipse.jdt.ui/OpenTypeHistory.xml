@@ -2,4 +2,7 @@
 <typeInfoHistroy>
     <typeInfo handle="=07_Polymorphism/src&lt;com.kh.chap04.model.service{CookingSkill.java[CookingSkill" modifiers="513" timestamp="1774487010790"/>
     <typeInfo handle="=07_Polymorphism/src&lt;com.kh.chap05.model.service{SoupFilter.java[SoupFilter" modifiers="513" timestamp="1774489699087"/>
+    <typeInfo handle="=08_Exception/src&lt;com.kh.sw.util{SwitchUtil.java[SwitchUtil" modifiers="513" timestamp="1774573637090"/>
+    <typeInfo handle="=08_Exception/C:\/260312_501_workspace\/eclipse-jee-2024-06-R-win32-x86_64\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;javax.swing(SwingConstants.class[SwingConstants" modifiers="1537" timestamp="1773295426188"/>
+    <typeInfo handle="=08_Exception/C:\/260312_501_workspace\/eclipse-jee-2024-06-R-win32-x86_64\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1773295426188"/>
 </typeInfoHistroy>

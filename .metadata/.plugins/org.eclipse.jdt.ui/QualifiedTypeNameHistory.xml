@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.kh.variable.Variable"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.kh.chap02.loop.LoopWhile"/>
     <fullyQualifiedTypeName name="com.kh.array.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.kh.chap05.model.vo.Member"/>
     <fullyQualifiedTypeName name="com.kh.chap02.model.vo.FpsGame"/>
     <fullyQualifiedTypeName name="com.kh.chap02.model.vo.RpgGame"/>
@@ -17,6 +15,23 @@
     <fullyQualifiedTypeName name="com.kh.chap03.controller.Cooking"/>
     <fullyQualifiedTypeName name="com.kh.chap04.model.service.CookingSkill"/>
     <fullyQualifiedTypeName name="com.kh.controller.UncheckedException"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.kh.controller.CheckedException"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="com.kh.sw.util.SwitchUtil"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.dao.FileByteDao"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="com.kh.chap04.model.dao.ObjectDao"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.Box"/>
+    <fullyQualifiedTypeName name="com.kh.chap02.model.vo.Plant"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.net.InetAddress"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.kh.football.functional.model.service.BinFilter"/>
+    <fullyQualifiedTypeName name="java.util.function.Supplier"/>
 </qualifiedTypeNameHistroy>
