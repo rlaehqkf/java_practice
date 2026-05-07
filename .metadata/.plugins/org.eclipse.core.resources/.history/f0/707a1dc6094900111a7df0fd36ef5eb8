@@ -1,0 +1,8 @@
+package com.kh.el.model.dto;
+
+public class Person {
+	private String name;
+	private int age;
+	private String adress;
+
+}
