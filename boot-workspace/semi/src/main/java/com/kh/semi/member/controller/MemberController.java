@@ -1,7 +1,11 @@
 package com.kh.semi.member.controller;
 
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -84,7 +88,7 @@ public class MemberController {
 	
 	// 비밀번호 변경 기능
 	@PatchMapping				// SpringSecurity => AuthenticationPrincipalArgumentsResolver
-	public ResponseEntity<?> changePassword(@AuthenticationPrincipal CustomUserDetails user,
+	public ResponseEntity<Void> changePassword(@AuthenticationPrincipal CustomUserDetails user,
 											@RequestBody @Valid UpdatePasswordDto upd){
 		// 1. 아이디, 변경전 비밀번호, 변경후 비밀번호
 		// 2. 비밀번호값에 대한 유효성 검증
@@ -98,6 +102,14 @@ public class MemberController {
 		
 	}
 	
+	@DeleteMapping
+	public ResponseEntity<Void> deleteByPassword(@RequestBody Map<String, String> password,
+												 @AuthenticationPrincipal CustomUserDetails user){
+		
+		
+		memberService.deleteByPassword(password.get("password"), user);
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+	}
 	
 	
 	

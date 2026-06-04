@@ -12,6 +12,7 @@ import com.kh.semi.member.model.dto.MemberDto;
 import com.kh.semi.member.model.dto.MemberMapper;
 import com.kh.semi.member.model.dto.UpdatePasswordDto;
 import com.kh.semi.member.model.vo.Member;
+import com.kh.semi.token.model.dao.TokenMapper;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberService {
 	
 	private final MemberMapper memberMapper;
+	private final TokenMapper tokenMapper;
 	private final PasswordEncoder passwordEncoder;
 
 	/*
@@ -67,19 +69,40 @@ public class MemberService {
 		
 	}
 
+	@Transactional
 	public void changePassword(CustomUserDetails user, @Valid UpdatePasswordDto upd) {
 		
 		// 사용자가 입력한 기존 비밀번호 평문, DB에 저장된 기존 비밀번호 암호문
 		String memberPwd = upd.getMemberPwd();
-		String encodePwd = user.getPassword();
+		String encodedPwd = user.getPassword();
 		
+		/*
 		if(!passwordEncoder.matches(memberPwd, encodePwd)) {
 			throw new CustomAuthenticationException("비밀번호가 일치하지 않습니다.");
 		}
+		*/
+		validatePassword(memberPwd, encodedPwd);
 		
 		String newPassword = passwordEncoder.encode(upd.getUpdatePwd());
 		
 		memberMapper.changePassword(user.getUsername(), newPassword);
+	}
+
+	@Transactional
+	public void deleteByPassword(String password, CustomUserDetails user) {
+		validatePassword(password, user.getPassword());
+		memberMapper.deleteByPassword(user.getUsername());
+		tokenMapper.deleteToken(user.getUsername());
+		
+		
+	}
+	
+	private void validatePassword(String rawPassword, String encodedPassword) {
+		
+		if(!passwordEncoder.matches(rawPassword, encodedPassword)) {
+			throw new CustomAuthenticationException("비밀번호가 일치하지 않습니다.");
+		}
+		
 	}
 	
 

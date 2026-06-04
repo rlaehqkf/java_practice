@@ -55,7 +55,8 @@ public class SecurityConfig {
 					requests.requestMatchers(HttpMethod.POST, "/api/members", "/api/auth/login").permitAll();
 					// PATCH방식으로 /api/members라는 요청이 오면 인증된건가 ?
 					requests.requestMatchers(HttpMethod.PATCH, "/api/members").authenticated();
-			
+					requests.requestMatchers(HttpMethod.DELETE, "/api/members").authenticated();
+					
 				}).sessionManagement(manager -> 
 				manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				
