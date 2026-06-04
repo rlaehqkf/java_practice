@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: study
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: C##SH
+    password: SH
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+server:
+  port: 80
+mybatis:
+  configuration:
+    jdbc-type-for-null: NULL
+    map-undersocore-to-camel-case: ture
